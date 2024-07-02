@@ -67,6 +67,14 @@ module.exports = {
           // presets: ['env', 'react']
         },
       },
+      {
+        test: /\.mjs?$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          // presets: ['env', 'react']
+        },
+      },
     ],
   },
 };
