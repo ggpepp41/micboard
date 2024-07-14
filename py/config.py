@@ -236,21 +236,14 @@ def update_slot(data):
     if data.get('extended_id'):
         slot_cfg['extended_id'] = data['extended_id']
         save_name = True
-    elif 'extended_id' in slot_cfg:
-        slot_cfg.pop('extended_id', None)
-
     if data.get('extended_name'):
         slot_cfg['extended_name'] = data['extended_name']
         save_name = True
-    elif 'extended_name' in slot_cfg:
-        slot_cfg.pop('extended_name', None)
-
     if save_name:
         try:
             slot_cfg['chan_name_raw'] = shure.get_network_device_by_slot(data['slot']).chan_name_raw
         except:
             pass
-
     elif 'chan_name_raw' in slot_cfg:
         slot_cfg.pop('chan_name_raw')
 

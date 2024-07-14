@@ -1,1 +1,4 @@
 tornado
+requests
+python-dotenv
+schedule

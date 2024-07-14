@@ -37,50 +37,52 @@
     {
       "chan_name_raw": "SLOT 1",
       "channel": 1,
-      "extended_name": "",
-      "ip": "",
+      "extended_name": "test",
+      "ip": "192.168.0.1",
       "slot": 1,
-      "type": ""
+      "type": "axtd"
     },
     {
-      "chan_name_raw": "SLOT 2",
       "channel": 1,
-      "extended_name": "",
-      "ip": "",
+      "ip": "192.168.0.2",
       "slot": 2,
-      "type": ""
+      "type": "axtd"
     },
     {
-      "chan_name_raw": "SLOT 3",
       "channel": 1,
-      "extended_name": "",
       "ip": "",
       "slot": 3,
-      "type": ""
+      "type": "axtd"
     },
     {
-      "chan_name_raw": "SLOT 4",
       "channel": 1,
-      "extended_name": "",
       "ip": "",
       "slot": 4,
-      "type": ""
+      "type": "axtd"
     },
     {
-      "chan_name_raw": "SLOT 5",
       "channel": 1,
-      "extended_name": "",
       "ip": "",
       "slot": 5,
-      "type": ""
+      "type": "axtd"
     },
     {
-      "chan_name_raw": "SLOT 6",
       "channel": 1,
-      "extended_name": "",
       "ip": "",
       "slot": 6,
-      "type": ""
+      "type": "axtd"
+    },
+    {
+      "channel": 1,
+      "ip": "",
+      "slot": 7,
+      "type": "axtd"
+    },
+    {
+      "channel": 1,
+      "ip": "",
+      "slot": 8,
+      "type": "axtd"
     }
   ],
   "uuid": "e33756fd-6bde-4a49-b75b-1716678d4ae4"

@@ -1,18 +1,23 @@
 FROM python:3
 
-MAINTAINER Karl Swanson <karlcswanson@gmail.com>
+LABEL org.opencontainers.image.source=https://github.com/ggpepp41/micboard
 
 WORKDIR /usr/src/app
+EXPOSE 8058
+CMD ["python3", "py/micboard.py"]
 
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install nodejs
 
-COPY . .
 
+COPY package.json .
+
+RUN npm install --omit=dev
+
+COPY /py/requirements.txt /usr/src/app/py/requirements.txt
 RUN pip3 install -r py/requirements.txt
-RUN npm install --only=prod
+
+COPY . .
 RUN npm run build
 
-EXPOSE 8058
 
-CMD ["python3", "py/micboard.py"]

@@ -1,11 +1,19 @@
-version: '2'
-
+name: micboard
 services:
   # -------- Micboard -----------
   micboard:
-    image: micboard
+    image: ghcr.io/ggpepp41/micboard:latest # remote build
+    #image: micboard:latest # local build
     container_name: micboard
     ports:
       - '8058:8058'
     volumes:
-      - ./config:/root/.local/share/micboard
+      - ./config/micboard:/root/.local/share/micboard
+    restart: always
+  
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config/watchtower/config.json:/config.json
+    restart: always

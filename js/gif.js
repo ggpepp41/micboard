@@ -10,8 +10,8 @@ export function updateBackground(slotSelector) {
     MP4: '.mp4',
   };
 
-  const name = s.getElementsByClassName('name')[0].innerHTML.toLowerCase() + extensions[micboard.backgroundMode];
-
+  const name = s.getElementsByClassName('name')[0].innerHTML.toLowerCase().replace(' ', '_') + extensions[micboard.backgroundMode];
+  console.log(name);
   if (micboard.backgroundMode === 'MP4' && micboard.mp4_list.indexOf(name) > -1) {
     const style = 'background: url("bg/' + name + '") center; background-size: cover;';
     s.setAttribute('style', style);

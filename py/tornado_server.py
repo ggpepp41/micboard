@@ -115,6 +115,7 @@ class SocketHandler(websocket.WebSocketHandler):
         del shure.data_update_list[:]
         del config.group_update_list[:]
 
+""" This does not make a perminant update the the config_tree
 class SlotHandler(web.RequestHandler):
     def get(self):
         self.write("hi - slot")
@@ -124,7 +125,7 @@ class SlotHandler(web.RequestHandler):
         self.write('{}')
         for slot_update in data:
             config.update_slot(slot_update)
-            print(slot_update)
+            print(slot_update)"""
 
 class ConfigHandler(web.RequestHandler):
     def get(self):
@@ -168,9 +169,9 @@ def twisted():
         (r'/ws', SocketHandler),
         (r'/data.json', JsonHandler),
         (r'/api/group', GroupUpdateHandler),
-        (r'/api/slot', SlotHandler),
+        #(r'/api/slot', SlotHandler),
         (r'/api/config', ConfigHandler),
-        # (r'/restart/', MicboardReloadConfigHandler),
+        (r'/restart/', MicboardReloadConfigHandler),
         (r'/static/(.*)', web.StaticFileHandler, {'path': config.app_dir('static')}),
         (r'/bg/(.*)', NoCacheHandler, {'path': config.get_gif_dir()})
     ])

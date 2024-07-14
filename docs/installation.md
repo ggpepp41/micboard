@@ -14,7 +14,7 @@ $ sudo apt-get install nodejs
 
 Download micboard
 ```
-$ git clone https://github.com/karlcswanson/micboard.git
+$ git clone https://github.com/ggpepp41/micboard.git
 ```
 
 Install micboard software dependencies via npm and pip
@@ -40,7 +40,7 @@ $ sudo systemctl enable micboard.service
 Check the [configuration](configuration.md) docs for more information on configuring micboard.
 
 ## macOS - Desktop Application
-Download and run micboard from the project's [GitHub Release](https://github.com/karlcswanson/micboard/releases/) page.  Add RF devices to the 'Slot Configuration' and press 'Save'.
+Download and run micboard from the project's [GitHub Release](https://github.com/ggpepp41/micboard/releases/) page.  Add RF devices to the 'Slot Configuration' and press 'Save'.
 
 Check the [configuration](configuration.md) docs for more information on configuring micboard.
 
@@ -63,7 +63,7 @@ $ brew install python3 node
 
 Download Micboard
 ```
-$ git clone https://github.com/karlcswanson/micboard.git
+$ git clone https://github.com/ggpepp41/micboard.git
 ```
 
 Install micboard software dependencies via npm and pip
@@ -89,7 +89,7 @@ $ python3 py/micboard.py
 ## Docker
 Download micboard from github
 ```
-$ git clone https://github.com/karlcswanson/micboard.git
+$ git clone https://github.com/ggpepp41/micboard.git
 ```
 
 Build and run docker image
