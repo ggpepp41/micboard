@@ -2,8 +2,8 @@ name: micboard
 services:
   # -------- Micboard -----------
   micboard:
-    image: ghcr.io/ggpepp41/micboard:latest # remote build
-    #image: micboard:latest # local build
+    #image: ghcr.io/ggpepp41/micboard:latest # remote build
+    image: micboard:latest # local build
     container_name: micboard
     ports:
       - '8058:8058'
